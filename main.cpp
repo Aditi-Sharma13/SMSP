@@ -170,7 +170,7 @@ int main()
         //DISPLAYS A MENU OF ACTIONS
 
 cout<<"--------------------------------";
-cout<<"\nSTUDENT MANAGEMENT SYSTEM";
+cout<<"\nSTUDENT MANAGEMENT SYSTEM\n";
 cout<<"--------------------------------";
 cout<<"\n1. ADD NEW STUDENT ";
 cout<<"\n2. DISPLAY ALL STUDENT ";

@@ -28,11 +28,16 @@ Version Control: Git & GitHub
 File Handling: fstream library
 
 ###### FILE STRUCTURE:
-SMSP/
+
+```plaintext
+┌── SMSP/
 │
 ├── main.cpp        # Main source code file
 ├── data.txt        # Stores student records (created automatically after running)
-└── README.md       # Project documentation
+├── README.md       # Project documentation
+└── sample-run.png  # (optional) Screenshot of sample program output
+└───────────────────────────────────────────────
+
 
 #### HOW TO RUN:
 
@@ -53,6 +58,7 @@ g++ main.cpp -o main
 4. Follow the on-screen menu options
 
 #### SAMPLE RUN (SCREENSHOT) :
+![alt text](image-1.png)
 
 
 #### AUTHOR:
