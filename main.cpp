@@ -10,23 +10,24 @@ class student{
     public:
 
     void input(){
-        cout<<"ENTER ROLL NO :";
+        cout<<"ENTER ROLL NO : ";
         cin>>roll;
         cin.ignore();
-        cout<<"ENTER YOUR NAME :";
+        cout<<"ENTER YOUR NAME : ";
         getline(cin,name);
-        cout<<"ENTER MARKS :";
+        cout<<"ENTER MARKS : ";
         cin >>marks;
         cin.ignore();
-        cout<<"ENTER COURSE NAME :";
+        cout<<"ENTER COURSE NAME : ";
         getline(cin,course);
         //TAKES DETAILS OF ASTUDENT AS INPUT 
     }
-    void display(){
-        cout<<"\nROLL NO."<<roll;
-        cout<<"\nNAME"<<name;
-        cout<<"\nMARKS"<<marks;
-        cout<<"\nCOURSE"<<course;
+    void display(){ 
+        cout<<" CONFIRM YOUR DETAILS :";
+        cout<<"\nROLL NO. : "<<roll;
+        cout<<"\nNAME : "<<name;
+        cout<<"\nMARKS : "<<marks;
+        cout<<"\nCOURSE : "<<course;
         //DISPLAY DETAILS
     }
     void add(){
@@ -44,10 +45,10 @@ class student{
         if(!fin){
             cout<<"ERROR FILE NOT FOUND" ;    
         return;   }
-            cout<<"ALL STUDENTS RECORDS ARE HERE";
+            cout<<"ALL STUDENTS RECORDS ARE HERE : \n";
             string line;
             while(getline(fin,line)){
-                cout<<line<<endl;
+                cout<<line<<endl;//DISPLAYS ALL THE RECORDS OF FILE DATA
             }
             fin.close();
     }
@@ -58,6 +59,8 @@ class student{
             cout<<"ERROR FILE NOT FOUND";
             return;
         }
+        //SEARCH FOR A STUDENT RECORD VIA ROLL NO.
+
         int sroll;
         cout<<"ENTER ROLL NO. TO BE SEARCHED";
         cin>>sroll;
@@ -96,7 +99,7 @@ fin.close();
             int fileroll=stoi(line.substr(0,line.find(',')));
             if (fileroll==updates){
                 cout<<"ENTER UPDATED DETAILS ";
-                input();
+                input();//TAKES ALL DETAILS AGAIN 
                 fout<<roll<<","<<name<<","<<marks<<","<<course<<endl;
                 found=true;
 
@@ -108,8 +111,8 @@ fin.close();
         }
         fin.close();
         fout.close();
-        remove("data.txt");
-        rename("new.txt","data.txt");
+        remove("data.txt");// REMOVES THE FILE
+        rename("new.txt","data.txt");//RENAMES "NEW" FILE TO "DATA FILE"
         if (found){
             cout<<"RECORD HAS BEEN UPDATED SUCCESSFULLY";
             return;
@@ -129,6 +132,7 @@ fin.close();
             cout<<"ERROR FILE NOT FOUND";
             return;
         }
+        //DELETE THE RECORD OF A STUDENT VIA ROLL NO.
         int searchroll;
         cout<<"ENTER ROLL NO. OF THE STUDENT WHOSE RECORD YOU WANT TO DELETE";
         cin>>searchroll;
@@ -163,14 +167,18 @@ fin.close();
 int main()
 { int choice,again;
     do{
+        //DISPLAYS A MENU OF ACTIONS
 
+cout<<"--------------------------------";
 cout<<"\nSTUDENT MANAGEMENT SYSTEM";
+cout<<"--------------------------------";
 cout<<"\n1. ADD NEW STUDENT ";
 cout<<"\n2. DISPLAY ALL STUDENT ";
 cout<<"\n3. DELETE RECORD OF A STUDENT  ";
 cout<<"\n4. SEARCH A STUDENT ";
 cout<<"\n5. UPDATE RECORD OF A STUDENT";
-cout<<"\nENTER HERE:";
+cout<<"\n----------------------------------------";
+cout<<"\nENTER HERE: ";
 cin>>choice;
 switch(choice){
     case 1 :{
@@ -201,11 +209,11 @@ switch(choice){
            break;}
     default : cout<<"INVALID CHOICE";
 
-}cout<<"ENTER 1 TO USE AGAIN OR 0 TO EXIT";
+}cout<<"\n\nENTER 1 TO USE AGAIN OR 0 TO EXIT : ";
     cin>>again;
     
         }
-    }
+    
     
     while(again ==1);
 }

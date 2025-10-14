@@ -2,24 +2,21 @@
 
 Student Management System Project.
 
+A C++ console-based project for managing student records using file handling — add, view, search, update, and delete student data efficiently.
+
 #### OVERVIEW:
 
-This is a Student Management System built using C++, featuring file handling for storing and managing student data permanently.
-
-It allows users to add, display, search, delete, and update student records using a menu-driven interface.
+The Student Management System is a menu-driven C++ project demonstrating the use of classes, objects, and file handling for persistent data storage. 
+It’s designed to simulate how basic database operations (CRUD) work internally in C++.
 
 ##### FEATURES:
-Add new student records
 
-Display all students
-
-Search student details
-
-Delete a specific student
-
-Update existing student information
-
-Data is stored permanently using file handling (data.txt)
+- ➕ Add new student records  
+- 📋 Display all student data  
+- 🔍 Search for a student by roll number  
+- 🗑️ Delete a specific student record  
+- ✏️ Update existing student information  
+- 💾 Persistent storage using file handling (`data.txt`)
 
 ###### TECHNOLOGIES USED:
 Language: C++
@@ -30,18 +27,18 @@ Version Control: Git & GitHub
 
 File Handling: fstream library
 
-########## FILE STRUCTURE:
+###### FILE STRUCTURE:
 SMSP/
 │
 ├── main.cpp        # Main source code file
 ├── data.txt        # Stores student records (created automatically after running)
 └── README.md       # Project documentation
 
-######## HOW TO RUN:
+#### HOW TO RUN:
 
 1. Clone the repository
 
-git clone https://github.com/<your-username>/SMSP.git
+git clone https://github.com/Aditi-Sharma13/SMSP.git
 
 
 2. Open the folder in VS Code or any C++ IDE
@@ -55,5 +52,10 @@ g++ main.cpp -o main
 
 4. Follow the on-screen menu options
 
+#### SAMPLE RUN (SCREENSHOT) :
+
+
+#### AUTHOR:
 Aditi Sharma
 🚀 BCA Student | C++ Learner | Passionate about building projects with file handling & logic .
+📬Connect with me on [LinkedIn](www.linkedin.com/in/aditi-sharma-bca13)
